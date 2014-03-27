@@ -17,6 +17,8 @@ The scripts makes it easy to run specific phases (or range of phases) so that yo
 
 For any details, simply read the [sauce](ewxb).
 
+More info about using Go with a gccgo cross-compiler can be found at the [go-wiki](http://code.google.com/p/go-wiki/wiki/GccgoCrossCompilation).
+
 
 ![Resulting x-compiler tools](result.png)
 
