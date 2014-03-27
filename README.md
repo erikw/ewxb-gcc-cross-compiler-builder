@@ -15,3 +15,8 @@ My setup was:
 The scripts makes it easy to run specific phases (or range of phases) so that you easly can tweak a failing phase and continue with the ones that follows when you have got one phase to work. Make sure to edit [x_environment.sh](x_environment.sh) to the right versions of the packages and build paths to use.
 
 For any details, simply read the [source](ewcross)
+
+
+![Resulting x-compiler tools](result.png)
+
+The sweet result after playing some Rube Goldberg trickery games.
