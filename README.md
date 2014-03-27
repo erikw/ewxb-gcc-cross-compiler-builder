@@ -1,7 +1,7 @@
 # ewxb - Erik Westrup's GCC cross-compiler builder
 ==========================
 
-This is a script documenting the steps and phases take when I compiled a GCC cross toolchain for GCC 4.9 head (with Go support). Building a cross-compiler is complex due to dependencies so a lot of bootstrapping has to be done. This script is inspired by Jim Blandy's excellent eglibc cross-compiling guide posted at eglibc's mailinglist at [patches Cross-building instructions](http://www.eglibc.org/archives/patches/msg00078.html).
+This is a script documenting the steps and phases take when I compiled a GCC cross toolchain for GCC 4.9 head (with Go support). Building a cross-compiler is complex due to dependencies so a lot of bootstrapping has to be done. This script is inspired by Jim Blandy's excellent eglibc cross-compiling guide posted at eglibc's mailinglist at [\[patches\] Cross-building instructions](http://www.eglibc.org/archives/patches/msg00078.html).
 
 This script can serve as a starting point for those who want to build a x-toolchain from scratch. Don't expect it to work in directly as it's tailored for my setup. Instead you can re-use the phases and modify the script with parameters that you need. The last phases adds Go support, which is easy to comment out if you're only interested in a C/C++ compiler.
 
