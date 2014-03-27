@@ -6,11 +6,12 @@ This is a script documenting the steps and phases take when I compiled a GCC cro
 This script can serve as a starting point for those who want to build a x-toolchain from scratch. Don't expect it to work in directly as it's tailored for my setup. Instead you can re-use the phases and modify the script with parameters that you need. The last phases adds Go support, which is easy to comment out if you're only interested in a C/C++ compiler.
 
 My setup was:
-	* Host/Build system: Linux 3.2.0-4-amd64 #1 SMP Debian 3.2.54-2 x86_64 GNU/Linux
-	* Target: mips
-	* gcc: 4.9 head
-	* glibc: 2.19
-	* binutils: 2.24
+
+* Host/Build system: Linux 3.2.0-4-amd64 #1 SMP Debian 3.2.54-2 x86_64 GNU/Linux
+* Target: mips
+* gcc: 4.9 head
+* glibc: 2.19
+* binutils: 2.24
 
 The scripts makes it easy to run specific phases (or range of phases) so that you easly can tweak a failing phase and continue with the ones that follows when you have got one phase to work. Make sure to edit [x_environment.sh](x_environment.sh) to the right versions of the packages and build paths to use.
 
