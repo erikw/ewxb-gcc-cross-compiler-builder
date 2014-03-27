@@ -29,11 +29,7 @@ log "$(date "+%Y-%m-%d-%H:%M:%S") Appending stdout & stdin to: ${log_file}"
 
 
 glibc_needs_port_pkg() {
-	if [[ $GLIBCVNO =~ 2\.([3-9]|1[0-6]) ]]; then
-		return 0
-	else
-		return 1
-	fi
+	[[ $GLIBCVNO =~ 2\.([3-9]|1[0-6]) ]]
 }
 
 setup_dir() {
