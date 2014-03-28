@@ -13,7 +13,14 @@ phasestars="*********"
 funcstars="${phasestars}***"
 
 log () {
-	printf "%s %s\n" "$prompt" "$@"
+	local fmt=""
+	if [ "$#"  -eq 1 ]; then
+		fmt="%s"
+	elif [ "$#"  -gt 1 ]; then
+		fmt="$1"
+		shift 1
+	fi
+	printf "%s ${fmt}\n" "|>" "$@"
 }
 
 source x_environment.sh
