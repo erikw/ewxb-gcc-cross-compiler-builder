@@ -160,7 +160,7 @@ phase_2() {
 		--enable-languages=c \
 		--without-headers \
 		--with-newlib \
-		--with-pkgversion="${USER}'s $TARGET GCC phase1 crosscompiler" \
+		--with-pkgversion="${USER}'s $TARGET GCC phase1 cross-compiler" \
 		--disable-libgcc \
 		--disable-shared \
 		--disable-threads \
@@ -255,7 +255,7 @@ phase_5() {
 		--build=$BUILD \
 		--host=$HOST \
 		--with-sysroot=$SYSROOT \
-		--with-pkgversion="${USER}'s $TARGET GCC phase2 crosscompiler" \
+		--with-pkgversion="${USER}'s $TARGET GCC phase2 cross-compiler" \
 		--enable-languages=c \
 		--disable-libssp \
 		--disable-libgomp \
@@ -334,7 +334,7 @@ phase_7() {
 		--disable-libmudflap \
 		--disable-libquadmath \
 		--disable-libquadmath-support \
-		--with-pkgversion="${USER}'s $TARGET GCC phase3 crosscompiler" \
+		--with-pkgversion="${USER}'s $TARGET GCC phase3 cross-compiler" \
 		--with-ppl=no \
 		--with-isl=no \
 		--with-cloog=no \
