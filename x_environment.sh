@@ -16,8 +16,8 @@ export SYSROOT="$CWORK/sysroot"
 
 # Pkg versions
 export BINUTILSV=binutils-2.24
-#export GCCV=gcc-4.8.2
-export GCCV=gccgo
+export GCCV=gcc-4.9.0
+#export GCCV=gccgo
 export GLIBCV=glibc-2.19
 export GLIBCVNO=$(echo $GLIBCV | sed -e 's/.*-\([[:digit:]]\)/\1/')
 export LINUXV=linux-2.6.31.14

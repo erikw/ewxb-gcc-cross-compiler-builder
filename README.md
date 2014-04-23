@@ -9,7 +9,7 @@ My setup was:
 
 * Host/Build system: Linux 3.2.0-4-amd64 #1 SMP Debian 3.2.54-2 x86_64 GNU/Linux
 * Target: mips
-* gcc: 4.9 head
+* gcc: 4.9.0
 * glibc: 2.19
 * binutils: 2.24
 
