@@ -39,7 +39,7 @@ glibc_needs_port_pkg() {
 	[[ $GLIBCVNO =~ 2\.([3-9]|1[0-6]) ]]
 }
 
-setup_dir() {
+setup_and_enter_dir() {
 	local dir="$1"
 	if [ -d "$dir" ]; then
 		printf "%s exists, delete it? [Y/n]: " "$dir"
@@ -135,7 +135,7 @@ phases+=(["1"]="binutils")
 phase_1() {
 	log "Building cross-compiling binutils."
 
-	setup_dir "$OBJ/binutils"
+	setup_and_enter_dir "$OBJ/binutils"
 
 	$SRC/$BINUTILSV/configure \
 		--prefix=$TOOLS \
@@ -150,7 +150,7 @@ phases+=(["2"]="gcc1")
 phase_2() {
 	log "Building barebone cross GCC so glibc headers can be compiled."
 
-	setup_dir "$OBJ/gcc1"
+	setup_and_enter_dir "$OBJ/gcc1"
 
 	$SRC/$GCCV/configure \
 		--prefix=$TOOLS \
@@ -193,7 +193,7 @@ phases+=(["4"]="glibc headers")
 phase_4() {
 	log "Install header files and bootstrap libc with friends."
 
-	setup_dir "$OBJ/glibc-headers"
+	setup_and_enter_dir "$OBJ/glibc-headers"
 
 	LD_LIBRARY_PATH_old="$LD_LIBRARY_PATH"
 	unset LD_LIBRARY_PATH
@@ -247,7 +247,7 @@ phases+=(["5"]="gcc2")
 phase_5() {
 	log "Build bootstrapped gcc that can compile a full glibc."
 
-	setup_dir "$OBJ/gcc2"
+	setup_and_enter_dir "$OBJ/gcc2"
 
 	$SRC/$GCCV/configure \
 		--prefix=$TOOLS \
@@ -278,7 +278,7 @@ phases+=(["6"]="glibc full")
 phase_6() {
 	log "Building a full glibc for $TARGET."
 
-	setup_dir "$OBJ/glibc"
+	setup_and_enter_dir "$OBJ/glibc"
 
 	LD_LIBRARY_PATH_old="$LD_LIBRARY_PATH"
 	unset LD_LIBRARY_PATH
@@ -320,7 +320,7 @@ phases+=(["7"]="gcc3")
 phase_7() {
 	log "Building the full GCC."
 
-	setup_dir "$OBJ/gcc3"
+	setup_and_enter_dir "$OBJ/gcc3"
 
 	$SRC/$GCCV/configure \
 		--prefix=$TOOLS \
@@ -355,7 +355,7 @@ phase_8() {
 	log "Testing to compile a C program."
 
 	test_path="/tmp/${TARGET}_test_$$"
-	setup_dir "$test_path"
+	setup_and_enter_dir "$test_path"
 
 	cat <<- EOF > helloc.c
 	#include <stdlib.h>
