@@ -86,6 +86,7 @@ phase_0() {
 			svn checkout svn://gcc.gnu.org/svn/gcc/branches/gccgo gccgo
 			cd $GCCV
 			contrib/download_prerequisites
+			cd $SRC
 		fi
 	else
 		if ! [ -f "$GCCV.tar.bz2" ]; then
@@ -96,6 +97,7 @@ phase_0() {
 			tar xvjf $GCCV.tar.bz2
 			cd $GCCV
 			contrib/download_prerequisites
+			cd $SRC
 		fi
 	fi
 
