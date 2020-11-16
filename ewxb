@@ -214,7 +214,7 @@ phase_4() {
 		--prefix=/usr \
 		--build=$BUILD \
 		--host=$TARGET \
-		--with-headers=$sysroot/usr/include \
+		--with-headers=$SYSROOT/usr/include \
 		--with-binutils=$TOOLS/$TARGET/bin \
 		$addons \
 		--enable-kernel="${LINUXV##*-}" \
