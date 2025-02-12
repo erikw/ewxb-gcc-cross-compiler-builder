@@ -1,5 +1,5 @@
 # ewxb - Erik Westrup's GCC cross-compiler builder
-[![SLOC](https://sloc.xyz/github/erikw/ewxb-gcc-cross-compiler-builder)](#)
+[![SLOC](https://sloc.xyz/github/erikw/ewxb-gcc-cross-compiler-builder?lower=true)](#)
 [![Top programming languages used](https://img.shields.io/github/languages/top/erikw/ewxb-gcc-cross-compiler-builder)](#)
 
 
