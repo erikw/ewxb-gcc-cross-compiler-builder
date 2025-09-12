@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Build a GCC toolchain with Go-support from scratch.
+# Build a GCC toolchain with Go support from scratch.
 # Author: Erik Westrup <erik.westrup@gmail.com>
-# Inspired by Jim Blandy's excellent eglibc cross-compiling guide posted at eglibc's mailinglist as "[patches] Cross-building instructions", available at http://www.eglibc.org/archives/patches/msg00078.html
+# Inspired by Jim Blandy's excellent eglibc cross-compiling guide posted at eglibc's mailing list as "[patches] Cross-building instructions", available at http://www.eglibc.org/archives/patches/msg00078.html
 
 set -e
 
@@ -234,7 +234,7 @@ phase_4() {
 	make csu/subdir_lib
 	cp csu/crt1.o csu/crti.o csu/crtn.o $SYSROOT/usr/lib
 
-	if [ "$GLIBCVNO" == "2.15" ]; then # At least 2.19 does this with install-headers target it self.
+	if [ "$GLIBCVNO" == "2.15" ]; then # At least 2.19 does this with install-headers target itself.
 		cp bits/stdio_lim.h $SYSROOT/usr/include/bits
 	fi
 
